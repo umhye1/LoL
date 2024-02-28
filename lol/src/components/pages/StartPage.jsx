@@ -1,20 +1,47 @@
 import React from 'react';
 import styled from "styled-components";
-import start from "../../assets/start.png";
+
+import background from '../../assets/container.png';
+import logo from "../../assets/logo.png";
+import logo1 from "../../assets/logo1.png";
+import logo2 from "../../assets/logo2.png";
 import { Link } from "react-router-dom";
+import { Transition } from 'react-transition-group';
 
 const Containter = styled.div`
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
-const StyledStartPage = styled.div`
-    background-image: url(${start});
+const Background = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(${background});
     background-repeat: no-repeat;
-    background-size: cover !important; 
+    background-size: cover; 
     background-position: center;
     width: 100vw;
     height: 100vh;
-`;
+`
 
+const Logo = styled.img`
+    position: absolute;
+    top:5%;
+    width: 30vw;
+    height: auto;
+    z-index:1;
+`
+
+const Logo2 = styled.img`
+    position: absolute;
+    top: 33%;
+    width: 23vw;
+    height: auto;
+    z-index:1;
+    
+`
 const ButtonContainer = styled.div`
     margin: 0;
     padding: 0;
@@ -23,8 +50,8 @@ const ButtonContainer = styled.div`
 `
 const StartButton = styled.button`
     position: absolute;
-    bottom: 21%;
-    left: 49%;
+    bottom: 18%;
+    left: 48.5%;
     href="https://fonts.googleapis.com/css?family=Marcellus+SC"
 
     font-family: 'Marcellus SC', serif;
@@ -56,15 +83,18 @@ const StartButton = styled.button`
 
 const StartPage = ()=>{
     return(
-       <Containter>
-            <StyledStartPage />
-            
-            <ButtonContainer>
-                <Link to ="/mainPage">
-                    <StartButton>시작</StartButton>
-                </Link>
-            </ButtonContainer>
-        </Containter>
+        <Background src={background}>
+            <Containter>
+                <Logo src={logo}/>
+                <Logo2 src={logo1}/>
+                    
+                <ButtonContainer>
+                    <Link to ="/mainPage">
+                        <StartButton>시작</StartButton>
+                    </Link>
+                </ButtonContainer>
+            </Containter>
+        </Background>
     )
 }
 export default StartPage;

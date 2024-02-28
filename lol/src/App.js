@@ -1,8 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
+
 import StartPage from './components/pages/StartPage';
 import MainPage from './components/pages/MainPage';
+import BoxPage from './components/pages/BoxPage';
+import NotePage from './components/pages/NotePage';
 
 function App(){
   return (
@@ -10,6 +13,8 @@ function App(){
       <Routes>
         <Route path="/" element={<StartPage />} />
         <Route path="/mainPage" element={<MainPage />} />
+        <Route path="/box" element={<BoxPage />} />
+        <Route path="/note" element={<NotePage />} />
       </Routes>
     </Router>
   )
