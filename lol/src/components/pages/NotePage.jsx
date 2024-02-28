@@ -102,6 +102,7 @@ const SubTitle = styled.div`
     margin: 1vw;
     color: #cdbe91;
     font-family: 'Lol-Bold', sans-serif;
+    font-weight: bold;
     font-size: 15px;
     letter-spacing: 1px;
     padding: 5px 15px; 

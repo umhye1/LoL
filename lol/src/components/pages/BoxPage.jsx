@@ -245,10 +245,11 @@ const SubTitle = styled.div`
     left: 0%;
     margin: 1vw;
     color: #cdbe91;
-    font-family: 'Lol-Bold', sans-serif;
+    font-family: 'Lol-Bold';
     font-size: 15px;
     letter-spacing: 1px;
     padding: 5px 15px; 
+    font-weight: bold;
 
     &:hover {
         text-shadow: 0 0 5px #ffffff80;
