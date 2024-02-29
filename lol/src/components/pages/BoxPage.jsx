@@ -1,5 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import { Link } from "react-router-dom";
+import Header2 from "../Header";
+
 import header from '../../assets/main.png';
 import box_no from '../../assets/notopen.gif'
 import styled from 'styled-components';
@@ -296,7 +298,7 @@ const BoxPage = () => {
 return(
     <Container>
         <Header src={header} alt="header"/>
-        
+        {/* <Header2/> */}
         <ButtonContainer>
             <Link to ="/">
                 <SubTitle>돌아가기</SubTitle>

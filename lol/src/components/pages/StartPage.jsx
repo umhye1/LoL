@@ -34,7 +34,7 @@ const Logo = styled.img`
     z-index:1;
 `
 
-const Logo2 = styled.img`
+const Logo1 = styled.img`
     position: absolute;
     top: 33%;
     width: 23vw;
@@ -86,10 +86,10 @@ const StartPage = ()=>{
         <Background src={background}>
             <Containter>
                 <Logo src={logo}/>
-                <Logo2 src={logo1}/>
+                <Logo1 src={logo1}/>
                     
                 <ButtonContainer>
-                    <Link to ="/mainPage">
+                    <Link to ="/loading">
                         <StartButton>시작</StartButton>
                     </Link>
                 </ButtonContainer>
